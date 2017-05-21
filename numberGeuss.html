@@ -1,0 +1,31 @@
+<!DOCTYPE <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Number Guess Game</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <p id="question">Guess a number from 1 - 10</p>
+        <input id="guess" type="text" value="" />
+        <input type="button" value="Guess" onclick="numberGuess()" />
+    
+    <script>
+        
+        
+        function numberGuess() {
+            let numberPick = ((Math.random() * 9) + 1).toFixed(0);
+            console.log(numberPick);
+            let guess = document.getElementById("guess");
+
+            if (guess.value == numberPick) {
+                document.getElementById("question").innerHTML = "you got it right";
+             } else {
+                document.getElementById("question").innerHTML = "try again";
+            }
+        }
+        
+    </script>
+    </body>
+</html>
+
